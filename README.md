@@ -4,7 +4,7 @@ Shell script desenvolvido para realizar pull automático nos repositórios da Sa
 
 >Autor : Felipe Yuri Silva  - Email : felipys@gmail.com
 
->Autor : William de Oliveira Vitorazzi - Email :
+>Autor : William de Oliveira Vitorazzi - Email : wvittorazzi@gmail.com
 
 ## Tecnologias
 - Shell Script (bash)
@@ -86,7 +86,7 @@ MM HH   * * *   usuario bash caminho_do_script_auto_pull_sankhya
 
 ![Imgur](https://i.imgur.com/DLzWAlF.png)
 
-4. Por fim, verifique se está tudo de acordo com suas preferências e clique em Concluir.
+##### 4. Por fim, verifique se está tudo de acordo com suas preferências e clique em Concluir.
 
 ![Imgur](https://i.imgur.com/tfa5nbu.png)
 
