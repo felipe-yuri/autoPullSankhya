@@ -1,8 +1,10 @@
 #!/bin/bash
 
 updateRepositorio() {
-    REPOSITORIO=$(find ~ -name sankhyaw | grep sankhyaw/sankhyaw)
 
+    #REPOSITORIO=$(find ~ -name sankhyaw | grep sankhyaw/sankhyaw)
+    REPOSITORIO=$(find / -path '*/sankhyaw/sankhya-js' | head -n 1)
+    
     if [ -d "$REPOSITORIO" ]; then
         cd $REPOSITORIO
         cd ../
@@ -10,6 +12,7 @@ updateRepositorio() {
         git pull
     else
         echo "Repositório não encontrado!"
+        return 1
     fi
 }
 
