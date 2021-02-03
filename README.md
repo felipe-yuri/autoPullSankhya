@@ -65,4 +65,28 @@ MM HH   * * *   usuario bash caminho_do_script_auto_pull_sankhya
 ##### 2. Apertar ctrl+x para fechar o crontab e salvar o arquivo. Pronto! Assim o script será executado diáriamente, todo dia no horário escolhido.
 
 #### No windows
-(em breve)
+
+##### No Windows o procedimento é feito através do agendamento de Tarefas:
+
+![Imgur](https://i.imgur.com/UQh2JH2.png)
+
+##### 1. Após entrar no agendador de Tarefas, clique em "Criar Tarefa Básica":
+
+![Imgur](https://i.imgur.com/nHK2F6T.png)
+
+##### 2. Nos passos a seguir, a maioria das preferências são customizáveis. Os prints a seguir demonstram o padrão que julgamos mais adequado:
+
+![Imgur](https://i.imgur.com/7loIER4.png)
+
+![Imgur](https://i.imgur.com/GK9tSBb.png)
+
+##### 3. Selecione "Executar um programa", uma nova janela irá se abrir. Nesta janela, informe o caminho do script baixado (os outros campos não são necessários). 
+
+![Imgur](https://i.imgur.com/yQwpKsr.png)
+
+![Imgur](https://i.imgur.com/DLzWAlF.png)
+
+4. Por fim, verifique se está tudo de acordo com suas preferências e clique em Concluir.
+
+![Imgur](https://i.imgur.com/tfa5nbu.png)
+
