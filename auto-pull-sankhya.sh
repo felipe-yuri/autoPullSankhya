@@ -8,6 +8,11 @@ updateRepositorio() {
         cd $REPOSITORIO
         cd ../
         git config credential.helper store
+        echo "-----------------------------"
+        echo ""
+        echo "ATUALIZANDO REPOSITÓRIO SANKHYAW (AUTO GIT-PULL)"
+        echo ""
+        echo "-----------------------------"
         git pull
     else
         echo "Repositório não encontrado!"
