@@ -1,11 +1,17 @@
 #!/bin/bash
 
 updateRepositorio() {
-    
+
     clear
 
-    REPOSITORIO=$(find / -path '*/sankhyaw/sankhya-js' | head -n 1) 
-    
+    echo "----------------------"
+    echo ""
+    echo "CARREGANDO O SCRIPT..."
+    echo ""
+    echo "----------------------"
+
+    REPOSITORIO=$(find / -path '*/sankhyaw/sankhya-js' | head -n 1)
+
     if [ -d "$REPOSITORIO" ]; then
         cd $REPOSITORIO
         cd ../
@@ -22,7 +28,7 @@ updateRepositorio() {
     fi
 }
 
-updateRepositorio 2> log.txt
+updateRepositorio 2>log.txt
 
 if [ $? -eq 0 ]; then
     echo -e "\nRepositório: $REPOSITORIO\nAtualizado com sucesso!\n"
