@@ -4,11 +4,11 @@ updateRepositorio() {
 
     clear
 
-    echo "----------------------"
+    echo "-------------------"
     echo ""
-    echo "CARREGANDO O SCRIPT..."
+    echo "CARREGANDO O SCRIPT"
     echo ""
-    echo "----------------------"
+    echo "-------------------"
 
     REPOSITORIO=$(find / -path '*/sankhyaw/sankhya-js' | head -n 1)
 
