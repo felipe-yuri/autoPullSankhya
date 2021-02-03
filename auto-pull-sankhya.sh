@@ -1,6 +1,8 @@
 #!/bin/bash
 
 updateRepositorio() {
+    
+    clear
 
     REPOSITORIO=$(find / -path '*/sankhyaw/sankhya-js' | head -n 1) 
     
@@ -8,11 +10,11 @@ updateRepositorio() {
         cd $REPOSITORIO
         cd ../
         git config credential.helper store
-        echo "-----------------------------"
+        echo "------------------------------------------------"
         echo ""
         echo "ATUALIZANDO REPOSITÓRIO SANKHYAW (AUTO GIT-PULL)"
         echo ""
-        echo "-----------------------------"
+        echo "------------------------------------------------"
         git pull
     else
         echo "Repositório não encontrado!"
@@ -25,5 +27,5 @@ updateRepositorio 2> log.txt
 if [ $? -eq 0 ]; then
     echo -e "\nRepositório: $REPOSITORIO\nAtualizado com sucesso!\n"
 else
-    echo -e "\nFalha ao tentar atualizar!\nRepositório:$REPOSITORIO\n"
+    echo -e "\nFalha ao tentar atualizar! Veja o log.\nRepositório:$REPOSITORIO\n"
 fi
