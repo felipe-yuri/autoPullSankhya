@@ -2,8 +2,7 @@
 
 updateRepositorio() {
 
-    #REPOSITORIO=$(find ~ -name sankhyaw | grep sankhyaw/sankhyaw)
-    REPOSITORIO=$(find / -path '*/sankhyaw/sankhya-js' | head -n 1)
+    REPOSITORIO=$(find / -path '*/sankhyaw/sankhya-js' | head -n 1) 
     
     if [ -d "$REPOSITORIO" ]; then
         cd $REPOSITORIO
@@ -16,10 +15,10 @@ updateRepositorio() {
     fi
 }
 
-updateRepositorio
+updateRepositorio 2> log.txt
 
 if [ $? -eq 0 ]; then
-    echo -e "\nRepositório atualizado com sucesso!\n"
+    echo -e "\nRepositório: $REPOSITORIO\nAtualizado com sucesso!\n"
 else
-    echo -e "\nFalha ao tentar atualizar o repositório \n$REPOSITORIO\n"
+    echo -e "\nFalha ao tentar atualizar!\nRepositório:$REPOSITORIO\n"
 fi
