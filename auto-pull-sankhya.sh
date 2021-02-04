@@ -25,7 +25,7 @@ findRepositorio() {
 
 }
 
-findRepositorio 2>>$PASTA_LOGS/log-auto-pull-sankhya-find.log
+findRepositorio 2>/dev/null
 
 updateRepositorio() {
 
