@@ -22,7 +22,7 @@ git clone https://github.com/felipys24/autoPullSankhya.git
 ## Rodar a aplicação
 #### 1. Abrir a pasta do repositório *autoPullSankhya*.
 #### 2. Abrir o git bash, powershell ou terminal linux.
-#### 3. Executar o script *auto-pull-sankhya.sh* com o comando abaixo.
+#### 3. Executar o script *auto-pull-sankhya.sh* com o comando abaixo. E digitar login e senha somente essa primeira vez.
 ##### No gitbash ou terminal linux
 ```bash
 bash auto-pull-sankhya.sh 
