@@ -40,7 +40,11 @@ updateRepositorio() {
         echo "ATUALIZANDO REPOSITÓRIO SANKHYAW (AUTO GIT-PULL)"
         echo ""
         echo "------------------------------------------------"
-        git pull
+
+        git branch -r | grep -v '\->' | while read remote; do git branch --track "${remote#origin/}" "$remote" || true; done
+        git fetch --all
+        git pull --all
+        
     else
         echo "Repositório não encontrado!"
         return 1
