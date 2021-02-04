@@ -41,10 +41,13 @@ updateRepositorio() {
         echo ""
         echo "------------------------------------------------"
 
+        # remote=origin
+        # for brname in $(git branch -r | grep $remote | grep -v master | grep -v HEAD | awk '{gsub(/^[^\/]+\//,"",$1); print $1}'); do git branch --track $brname $remote/$brname || true; done
+
         git branch -r | grep -v '\->' | while read remote; do git branch --track "${remote#origin/}" "$remote" || true; done
         git fetch --all
         git pull --all
-        
+
     else
         echo "Repositório não encontrado!"
         return 1
