@@ -4,11 +4,13 @@ updateRepositorio() {
 
     clear
 
-    echo "-------------------"
+    echo "---------------------------------"
     echo ""
-    echo "CARREGANDO O SCRIPT"
+    echo "PROCURANDO O REPOSITÓRIO SANKHYAW"
     echo ""
-    echo "-------------------"
+    echo "---------------------------------"
+
+    chmod +x . auto-pull-sankhya.sh
 
     REPOSITORIO=$(find / -path '*/sankhyaw/sankhya-js' | head -n 1)
 
@@ -28,7 +30,7 @@ updateRepositorio() {
     fi
 }
 
-updateRepositorio 2>log.txt
+updateRepositorio 2>log.log
 
 if [ $? -eq 0 ]; then
     echo -e "\nRepositório: $REPOSITORIO\nAtualizado com sucesso!\n"
