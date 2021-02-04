@@ -68,6 +68,11 @@ MM HH   * * *   usuario bash caminho_do_script_auto_pull_sankhya
 
 ##### 2. Apertar ctrl+x para fechar o crontab e salvar o arquivo. Pronto! Assim o script será executado diáriamente no horário escolhido.
 
+##### 3. Será necessário dar permissão de execução ao script, através do comando abaixo, para que o crontab consiga executa-lo.
+```bash
+chmod +x auto-pull-sankhya.sh
+```
+
 #### No windows
 
 ##### No Windows o procedimento é feito através do agendamento de Tarefas:

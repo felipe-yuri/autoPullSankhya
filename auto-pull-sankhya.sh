@@ -1,4 +1,15 @@
 #!/bin/bash
+criarPastaLogs(){
+    
+    PASTA_LOGS=~/Logs
+
+    if [ ! -d $PASTA_LOGS ]; then
+        mkdir $PASTA_LOGS
+    fi
+
+}
+
+criarPastaLogs
 
 updateRepositorio() {
 
@@ -9,8 +20,6 @@ updateRepositorio() {
     echo "PROCURANDO O REPOSITÓRIO SANKHYAW"
     echo ""
     echo "---------------------------------"
-
-    chmod +x . auto-pull-sankhya.sh
 
     REPOSITORIO=$(find / -path '*/sankhyaw/sankhya-js' | head -n 1)
 
@@ -29,8 +38,7 @@ updateRepositorio() {
         return 1
     fi
 }
-
-updateRepositorio 2>log.log
+updateRepositorio 2>$PASTA_LOGS/log-auto-pull-sankhya.log
 
 if [ $? -eq 0 ]; then
     echo -e "\nRepositório: $REPOSITORIO\nAtualizado com sucesso!\n"
