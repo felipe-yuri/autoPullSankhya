@@ -39,6 +39,10 @@ bash auto-pull-sankhya.sh
 DE: REPOSITORIO=$(find / -path '*/sankhyaw/sankhya-js' | head -n 1)
 
 PARA: REPOSITORIO=$("Caminho_do_repositorio_sankhyaw")
+
+OU
+
+PARA: REPOSITORIO="C:/Caminho_do_repositorio_sankhyaw"
 ```
 ##### Solução 2: Trocar a / por . (ponto) e mover o script *auto-pull-sankhya.sh* para uma pasta anterior a pasta do repositório do sankhyaw. Desse modo, o script não interfere no repositório e será mais fácil encontrar a pasta do repositório de forma automática.
 ```bash
