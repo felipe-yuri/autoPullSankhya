@@ -54,7 +54,7 @@ updateRepositorio() {
     fi
 }
 
-updateRepositorio 2>>$PASTA_LOGS/log-auto-pull-sankhya-update.log
+updateRepositorio 2>$PASTA_LOGS/log-auto-pull-sankhya-update.log
 
 if [ $? -eq 0 ]; then
     echo -e "\nRepositório: $REPOSITORIO\nAtualizado com sucesso!\n"
