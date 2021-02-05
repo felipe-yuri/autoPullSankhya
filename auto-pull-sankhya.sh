@@ -50,14 +50,35 @@ updateRepositorio() {
         # git fetch --all
         # git pull --all
 
-        #Método 3
-        git branch -r | grep -v '\->' | while read remote; do
-            git branch --track "${remote#origin/}" "$remote" || true
-            NOME_BRANCH=$(echo $remote | awk -F/ '{ print $2}')
-            git checkout $NOME_BRANCH
-            # git fetch
+        #Método 3 - Atualiza todas as branches existente
+        # git branch -r | grep -v '\->' | while read remote; do
+        #     git branch --track "${remote#origin/}" "$remote" || true
+        #     NOME_BRANCH=$(echo $remote | awk -F/ '{ print $2}')
+        #     git checkout $NOME_BRANCH
+        #     # git fetch
+        #     git pull
+        # done
+
+        #Método 4 - Atualiza somente as versões
+        VERSOES=('master' '4.7' '4.6' '4.5')
+
+        for versao in 'master' '4.7' '4.6' '4.5'; do
+            echo $versao
+            git checkout $versao
             git pull
         done
+
+        #Método 5 - Atualiza somente as 20 branches mais usadas
+        # git for-each-ref --sort='-committerdate' --format='%(refname)%09%(committerdate)' refs/heads | sed -e 's-refs/heads/--'
+        # git fetch --all
+        # git pull --all
+        # git for-each-ref --sort='-committerdate' --format='%(refname)' refs/heads | sed -e 's-refs/heads/--' | head -n 20 '\->' | while read remote; do
+        #     git branch --track "${remote#origin/}" "$remote" || true
+        #     NOME_BRANCH=$(echo $remote | awk -F/ '{ print $2}')
+        #     git checkout $NOME_BRANCH
+        #     # git fetch
+        #     git pull
+        # done
 
     else
         echo "Repositório não encontrado!"
@@ -65,7 +86,7 @@ updateRepositorio() {
     fi
 }
 
-updateRepositorio 2>$PASTA_LOGS/log-auto-pull-sankhya-update.log
+updateRepositorio #2>$PASTA_LOGS/log-auto-pull-sankhya-update.log
 
 if [ $? -eq 0 ]; then
     echo -e "\nRepositório: $REPOSITORIO\nAtualizado com sucesso!\n"
