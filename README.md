@@ -100,12 +100,12 @@ chmod +x auto-pull-sankhya.sh
 ![Imgur](https://i.imgur.com/tfa5nbu.png)
 
 ## Registros (logs)
-#### Os registros desse script serão criados na raiz da pasta dos usuários.
+#### Os registros desse script serão criados na raiz da pasta do usuário.
 ##### No linux, fica no caminho abaixo
 ```bash
 ~/Logs/
 ```
 ##### No windows, fica no caminho abaixo
 ```bash
-Sua_Unidade:\users\Logs\
+Sua_Unidade:\Users\Seu_Usuario\Logs\
 ```
