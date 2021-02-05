@@ -63,7 +63,6 @@ updateRepositorio() {
         VERSOES=('master' '4.7' '4.6' '4.5')
 
         for versao in 'master' '4.7' '4.6' '4.5'; do
-            echo $versao
             git checkout $versao
             git pull
         done
