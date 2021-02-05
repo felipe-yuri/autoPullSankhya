@@ -60,8 +60,6 @@ updateRepositorio() {
         # done
 
         #Método 4 - Atualiza somente as versões
-        VERSOES=('master' '4.7' '4.6' '4.5')
-
         for versao in 'master' '4.7' '4.6' '4.5'; do
             git checkout $versao
             git pull
