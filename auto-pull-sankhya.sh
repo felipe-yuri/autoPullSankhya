@@ -59,14 +59,7 @@ updateRepositorio() {
         #     git pull
         # done
 
-        #Método 4 - Atualiza somente as versões
-        for versao in 'master' '4.7' '4.6' '4.5'; do
-            git checkout $versao
-            git fetch
-            git pull
-        done
-
-        #Método 5 - Atualiza somente as 20 últimas branches commitadas
+        #Método 4 - Atualiza somente as 20 últimas branches commitadas
         # git for-each-ref --sort='-committerdate' --format='%(refname)%09%(committerdate)' refs/heads | sed -e 's-refs/heads/--'
         # git for-each-ref --sort='refname' --count=20 --format='%(refname)' 'refs/heads/**/4*[5-9]' | sed -e 's-refs/heads/--'
         # git fetch --all
@@ -79,7 +72,15 @@ updateRepositorio() {
         #     git pull
         # done
 
+        #Método 5 - Atualiza somente as versões
+        for versao in 'master' '4.7' '4.6' '4.5'; do
+            git checkout $versao
+            git fetch
+            git pull
+        done
+
     else
+
         echo "Repositório não encontrado!"
         return 1
     fi
